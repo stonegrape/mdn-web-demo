@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css box-border-box</title>
+    <style>
+        table {
+            width: 400px;
+            height: 200px;
+        }
+
+        table,
+        td,
+        th {
+            border: 2px solid black;
+            border-collapse: collapse;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        th {
+            height: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>排名</th>
+                <th>书名</th>
+                <th>作者</th>
+                <th>视频</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>1</td>
+                <td>三国演义</td>
+                <td><a href="https://baike.baidu.com/item/%E7%BD%97%E8%B4%AF%E4%B8%AD/172206">罗贯中</a></td>
+                <td><a
+                        href="https://search.bilibili.com/all?keyword=%E4%B8%89%E5%9B%BD%E6%BC%94%E4%B9%89">bilibili-三国演义</a>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>西游记</td>
+                <td><a href="https://baike.baidu.com/item/%E5%90%B4%E6%89%BF%E6%81%A9/18713182"></a>吴承恩</td>
+                <td><a
+                        href="https://www.bilibili.com/bangumi/play/ss33622/?bsource=pc_sem_360_dsj&keywordid=37400972141&userid=3274507253&planid=1556165857&unitid=2045388722&creative=6114730168">B站西游记</a>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>红楼梦</td>
+                <td><a href="https://baike.baidu.com/item/%E6%9B%B9%E9%9B%AA%E8%8A%B9/14919"></a> 曹雪芹</td>
+                <td><a
+                        href="https://search.bilibili.com/all?keyword=%E7%BA%A2%E6%A5%BC%E6%A2%A6&from_source=nav_suggest_new">bilibili-红楼梦</a>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>水浒传</td>
+                <td><a href="https://baike.baidu.com/item/%E6%96%BD%E8%80%90%E5%BA%B5/169936">施耐庵</a></td>
+                <td><a
+                        href="https://search.bilibili.com/all?keyword=%E6%B0%B4%E6%B5%92%E4%BC%A0&from_source=nav_suggest_new">bilibili-水浒传</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

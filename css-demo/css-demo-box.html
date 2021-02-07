@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css box</title>
+    <style>
+        /* 
+        border-width 
+        border-style 
+        border-color 
+        */
+        .solid {
+            width: 100px;
+            height: 100px;
+            border: 2px solid red;
+        }
+
+        .dashed {
+            width: 100px;
+            height: 100px;
+            border: 2px dashed aqua;
+        }
+
+        .dotted {
+            width: 100px;
+            height: 100px;
+            border: 2px dotted blue;
+        }
+
+        .test {
+            width: 200px;
+            height: 200px;
+            border: 3px solid blue;
+            border-top: 3px solid red;
+        }
+
+        .test2 {
+            display: block;
+            background-color: aqua;
+            width: 200px;
+            height: 200px;
+            /*padding color is the same as the content*/
+            padding: 10px;
+            border: 3px dotted red;
+            margin: 15px;
+        }
+
+        .test3 {
+            display: block;
+            background-color: yellow;
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            border: 3px solid blue;
+            margin: 10px;
+        }
+
+        .test4 {
+            display: block;
+            background-color: aqua;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+        }
+
+        .test5 {
+            display: block;
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            margin: 10px auto;
+            /* border: 2px solid blue; */
+            border-top-left-radius: 10px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 30px;
+            border-bottom-left-radius: 10px;
+        }
+
+        .test6 {
+            display: block;
+            background-color: blue;
+            width: 100px;
+            height: 100px;
+            margin: 10px 20px;
+            border-radius: 10px;
+            border: 10px solid red;
+        }
+
+        img {
+            width: 300px;
+            height: 300px;
+            overflow: visible;
+        }
+
+        p {
+            width: 12em;
+            height: 6em;
+            border: dotted;
+            overflow: scroll;
+        }
+
+
+
+        .a {
+            display: block;
+            width: 300px;
+            height: 300px;
+            background-image: url(https://bkimg.cdn.bcebos.com/pic/78310a55b319ebc4146b14418026cffc1f1716d2?x-bce-process=image/watermark,image_d2F0ZXIvYmFpa2U4MA==,g_7,xp_5,yp_5);
+            background-repeat: no-repeat;
+        }
+
+        .b {
+            display: block;
+            width: 500px;
+            height: 500px;
+            background-color: aqua;
+            background-image: url(https://tse3-mm.cn.bing.net/th/id/OIP._aTRR0maoS5Zh8bUbAk-zQHaHa?w=176&h=180&c=7&o=5&dpr=1.3&pid=1.7);
+            background-repeat: no-repeat;
+            background-position: top 20px;
+            background-position: 20px 2em;
+            background-position: top 20px;
+
+        }
+
+        .c {
+            display: inline-block;
+            width: 300px;
+            height: 300px;
+
+            background-image: linear-gradient(105deg, rgba(0, 249, 255, 1) 39%, rgba(51, 56, 57, 1) 96%);
+        }
+
+        .d {
+            display: inline-block;
+            width: 300px;
+            height: 300px;
+            background-image: radial-gradient(circle, rgba(0, 249, 255, 1) 39%, rgba(51, 56, 57, 1) 96%);
+            background-size: 100px 50px;
+        }
+
+        .e {
+            display: block;
+            width: 500px;
+            height: 500px;
+            background-color: aqua;
+            background-image: url(data:image/jpeg;base64,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);
+            background-repeat: no-repeat;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper3">
+        <div class="box e"></div>
+    </div>
+
+    <div class="wrapper2">
+        <div class="box c"></div>
+        <div class="box d"></div>
+    </div>
+    <div class="wrapper">
+        <div class="box a"></div>
+        <div class="box b"></div>
+    </div>
+    <div class="solid"></div>
+    <div class="dashed"></div>
+    <div class="dotted"></div>
+    <div class="test"></div>
+    <div class="test2">this is a box about width-height-padding-border-margin</div>
+    <div class="test3">margin collapsing 外边距折叠 什么时候外边距会折叠？<a
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">mdn
+            外边距折叠</a></div>
+    <div class="test4"></div>
+    <div class="test5"></div>
+    <div class="test6">border-radius</div>
+    <img src="https://th.bing.com/th/id/Re29dfabb7126d1782b3a7b5df0fbe9a0?rik=hL1LKGfme4SLfw&riu=http%3a%2f%2fpic3.nipic.com%2f20090519%2f2579912_124347086_2.jpg&ehk=Y77i34SbbhSj66MoU1HDYMILv3PLBP27hFhnevEkpw8%3d&risl=&pid=ImgRaw"
+        alt="this is a dinasour">
+    <img src="https://pic1.zhimg.com/v2-caffb6ed2e93542782bdd82b92874e21_r.jpg?source=1940ef5c" alt="恐龙王">
+    <p>visible (default)Sed ut perspiciatis unde omnis iste natus error sit visible (default)Sed ut perspiciatis unde
+        omnis iste natus error sit visible (default)Sed ut perspiciatis unde omnis iste natus error sit </p>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Background attachment example</title>
+    <link rel="stylesheet" type="text/css">
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        body {
+            padding: 1em;
+        }
+
+        html {
+            background-color: yellow;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        body {
+            height: 2000px;
+        }
+
+        section {
+            display: flex;
+        }
+
+        article {
+            flex: 1;
+            height: 400px;
+            background-color: rgba(0, 0, 0, 0.5);
+            background-image: url(https://tse2-mm.cn.bing.net/th/id/OIP.tDuKgvMIKg8YjaI4r1uv0AHaFM?w=276&h=194&c=7&o=5&dpr=1.3&pid=1.7);
+            padding: 1%;
+            overflow: auto;
+        }
+
+        article pre {
+            height: 800px;
+        }
+
+        .fixed,
+        .scroll {
+            margin-right: 1%;
+        }
+
+        .fixed {
+            background-attachment: fixed;
+        }
+
+        .scroll {
+            background-attachment: scroll;
+        }
+
+        .local {
+            background-attachment: local;
+        }
+
+        footer {
+            clear: both;
+            background-repeat: repeat;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Background attachment example</h1>
+
+    <section>
+        <article class="scroll">
+
+            <p><code>background-attachment: scroll</code> causes the element's background to be fixed to the page, so
+                that it scrolls when the page is scrolled. If the element content is scrolled, the background does not
+                move.</p>
+
+            <pre></pre>
+
+        </article>
+
+        <article class="fixed">
+
+            <p><code>background-attachment: fixed</code> causes an element's background to be fixed to the viewport, so
+                that it doesn't scroll when the page or element content is scrolled. It will always remain in the same
+                position on the screen.</p>
+
+            <pre></pre>
+
+        </article>
+
+        <article class="local">
+
+            <p><code>background-attachment: local</code>, new to CSS3, causes an element's background to be fixed to the
+                actual element itself. So When the page is scrolled, the element's background will move along with it
+                only if the element does so (so not in the case of elements with <code>position: fixed</code>.) When the
+                element's content is scrolled, the background will scroll along with it.</p>
+
+            <pre></pre>
+
+        </article>
+    </section>
+
+</body>
+
+</html>

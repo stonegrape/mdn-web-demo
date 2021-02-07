@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div,
+        p {
+            background-color: aqua;
+        }
+
+        div,
+        p,
+        ul {
+            color: brown;
+        }
+
+        /* 没有访问过的链接 a:link */
+        a:link {
+            color: black;
+            text-decoration: none;
+        }
+
+        /* 访问过链接 */
+        a:visited {
+            color: brown;
+        }
+
+        /* 鼠标经过的链接 */
+        a:hover {
+            color: blue;
+        }
+
+        /* 鼠标经过，并且正在按下，没有弹起 */
+        a:active {
+            color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div>玛莎</div>
+    <p>熊</p>
+    <span>狼</span>
+    <ul class="pig">
+        <li>佩奇</li>
+        <li>乔治</li>
+        <li>艾米莉</li>
+    </ul>
+    <a href="#">click here to baidu </a>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            /* font-family: 'Courier New', Courier, monospace;
+            font-size: 20px;
+            font-weight: bold; */
+            /* font-weight: normal; */
+            /* font-weight: 400; */
+            /* font-weight: 700; */
+            /* strong em 的语义？？  */
+            /* font-style: italic; */
+            /* font: font-style font-weight font-size/height font-family; */
+            font: italic 700 18px 'monospace';
+        }
+
+        h1 {
+            color: blue;
+            color: #c01a28;
+            color: rgb(100, 200, 300);
+            color: rgba(100, 200, 300, 0.8);
+            /* 0.8 透明度*/
+            text-align: center;
+            text-decoration: line-through;
+        }
+
+        p {
+            text-indent: 2em;
+            /* 首行缩进   em:  2em = 40px 相对单位 */
+            line-height: 10px;
+            /* line-height 中的值是 盒子模型中 width height 中height的值; 资料中讲解的不对 demo试一试*/
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .search {
+            color: #666;
+            width: 170px;
+        }
+
+        .btn {
+            font-weight: bold;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .pic {
+            text-align: center;
+        }
+
+        ol li {
+            color: #c01a28;
+            background-color: aqua;
+        }
+
+        .color>li {
+            background-color: #c01a28;
+
+        }
+
+        .mood>a {
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>title</h1>
+    <p>this is a css demo</p>
+    <!-- 图片居中 -->
+    <p class="pic">
+        <img src="dinasour.jpg" alt="this is an dinasour">
+    </p>
+    <p>hello world!</p>
+    <a href="https://www.baidu.com/">百度</a>
+    <form action="">
+        <input type="text" value="your name" class="search">
+        <button class="btn">搜索</button>
+    </form>
+
+    <ul class="color">
+        <li>red</li>
+        <li>blue</li>
+        <li>green</li>
+    </ul>
+    <div class="mood">
+        <a href="#">good</a>
+        <ul>
+            <li>bad</li>
+            <li>terrible</li>
+        </ul>
+    </div>
+</body>
+
+</html>

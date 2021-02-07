@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web widgets</title>
+    <style>
+        input,
+        select {
+            display: block;
+            margin: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <label for="comment">text</label>
+    <input type="text" id="comment" name="comment" value="I'm a text field">
+    <input type="email" id="email" name="email" multiple>
+    <input type="password" id="pwd" name="pwd">
+    <input type="search" id="search" name="search">
+    <input type="tel" id="tel" name="tel">
+    <input type="url" id="url" name="url">
+    <textarea name="" id="" cols="50" rows="10">this is a textarea.</textarea>
+    <select id="groups" name="groups">
+        <optgroup label="fruits">
+            <option>Banana</option>
+            <option>Cherry</option>
+            <option>Lemon</option>
+        </optgroup>
+        <optgroup label="vegetables">
+            <option>Carrot</option>
+            <option selected>Eggplant</option>
+            <option>Potato</option>
+        </optgroup>
+    </select>
+    <label for="myFruit">What's your favorite fruit?</label>
+    <input type="text" name="myFruit" id="myFruit" list="mySuggestion">
+    <datalist id="mySuggestion">
+        <option>Apple</option>
+        <option>Banana</option>
+        <option>Blackberry</option>
+        <option>Blueberry</option>
+        <option>Lemon</option>
+        <option>Lychee</option>
+        <option>Peach</option>
+        <option>Pear</option>
+    </datalist>
+
+    <label for="myFruit">What is your favorite fruit? (With fallback)</label>
+    <input type="text" id="myFruit" name="fruit" list="fruitList">
+
+    <datalist id="fruitList">
+        <label for="suggestion">or pick a fruit</label>
+        <select id="suggestion" name="altFruit">
+            <option>Apple</option>
+            <option>Banana</option>
+            <option>Blackberry</option>
+            <option>Blueberry</option>
+            <option>Lemon</option>
+            <option>Lychee</option>
+            <option>Peach</option>
+            <option>Pear</option>
+        </select>
+    </datalist>
+
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Checkable items examples</title>
+    </head>
+
+    <body>
+        <form>
+            <fieldset>
+                <legend>Choose all the vegetables you like to eat</legend>
+                <ul>
+                    <li>
+                        <label for="carrots">Carrots</label>
+                        <input type="checkbox" checked id="carrots" name="carrots" value="carrots">
+                    </li>
+                    <li>
+                        <label for="peas">Peas</label>
+                        <input type="checkbox" id="peas" name="peas" value="peas">
+                    </li>
+                    <li>
+                        <label for="cabbage">Cabbage</label>
+                        <input type="checkbox" id="cabbage" name="cabbage" value="cabbage">
+                    </li>
+                    <li>
+                        <label for="cauli">Cauliflower</label>
+                        <input type="checkbox" id="cauli" name="cauli" value="cauli">
+                    </li>
+                    <li>
+                        <label for="broc">Broccoli</label>
+                        <input type="checkbox" id="broc" name="broc" value="broc">
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>What is your favorite meal?</legend>
+                <ul>
+                    <li>
+                        <label for="soup">Soup</label>
+                        <input type="radio" checked id="soup" name="meal" value="soup">
+                    </li>
+                    <li>
+                        <label for="curry">Curry</label>
+                        <input type="radio" id="curry" name="meal" value="curry">
+                    </li>
+                    <li>
+                        <label for="pizza">Pizza</label>
+                        <input type="radio" id="pizza" name="meal" value="pizza">
+                    </li>
+                    <li>
+                        <label for="tacos">Tacos</label>
+                        <input type="radio" id="tacos" name="meal" value="tacos">
+                    </li>
+                    <li>
+                        <label for="bolognaise">Bolognaise</label>
+                        <input type="radio" id="bolognaise" name="meal" value="bolognaise">
+                    </li>
+                </ul>
+            </fieldset>
+            <label for="beans">How many beans can you eat?</label>
+            <input type="range" name="beans" id="beans" min="0" max="500" step="10">
+            <span class="beancount"></span>
+        </form>
+        <form action="#">
+            <input type="datetime-local" id="datetime" name="datetime">
+            <input type="month" name="month" id="month">
+            <input type="time" name="time" id="time">
+            <input type="week" name="week" id="week">
+            <label for="myDate">When are you available this summer? </label>
+            <input type="date" name="myDate" id="myDate" min="2013-06-01" max="2013-08-31">
+            <input type="color" name="color" id="color">
+        </form>
+        <form action="#">
+            <label for="file">choose an image file to update</label>
+            <input type="file" id="file" name="file" accept="image/*" multiple>
+            <input type="image" id="image" name="image" src="../css-demo/balloons.jpg">
+            <progress max="100" value="75">75/100</progress>
+            <meter max="100" min="0" value="20" low="33" high="75" optimum="50">75</meter>
+        </form>
+
+    </body>
+    <script>
+        var beans = document.querySelector('#beans');
+        var count = document.querySelector('.beancount');
+
+        count.textContent = beans.value;
+
+        beans.oninput = function () {
+            count.textContent = beans.value;
+        }
+    </script>
+
+    </html>
+
+
+</body>
+
+</html>

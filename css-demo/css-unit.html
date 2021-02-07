@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css numbers length unit</title>
+    <style>
+        .wrapper {
+            width: 400px;
+            border: 5px solid rebeccapurple;
+        }
+
+        .px {
+            background-color: aqua;
+            width: 300px;
+        }
+
+        .percent {
+            background-color: bisque;
+            width: 40%;
+        }
+
+        /* 
+        html {
+            font-size: 16px;
+        } */
+
+        .ems li {
+            background-color: aqua;
+            font-size: 1.3em;
+            width: 10em;
+        }
+
+        .rems li {
+            background-color: red;
+            font-size: 1.3rem;
+            width: 10rem;
+        }
+
+        .opacity {
+            background-color: aquamarine;
+            font-size: 48px;
+            width: 3em;
+            opacity: 0.2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="opacity">
+        I am a box.
+    </div>
+    <div class="box px">I am 200px wide</div>
+    <div class="box percent">I am 40% wide</div>
+    <div class="wrapper">
+        <div class="box px">I am 200px wide</div>
+        <div class="box percent">I am 40% wide</div>
+    </div>
+
+    <!-- relative length -->
+    <!-- em和rem -->
+    <ul class="ems">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three
+            <ul>
+                <li>Three A</li>
+                <li>Three B
+                    <ul>
+                        <li>Three B 2</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <ul class="rems">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three
+            <ul>
+                <li>Three A</li>
+                <li>Three B
+                    <ul>
+                        <li>Three B 2</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+</body>
+
+</html>

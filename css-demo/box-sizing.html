@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css box-sizing</title>
+    <style>
+        div {
+            display: block;
+            width: 120px;
+            height: 150px;
+            padding: 10px;
+            border: 2px solid #333333;
+            margin: 10px;
+        }
+
+        .content-box {
+            background-color: red;
+            color: aliceblue;
+
+            box-sizing: content-box;
+
+        }
+
+        .border-box {
+            background-color: blue;
+            color: aliceblue;
+
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content-box">content-box</div>
+    <div class="border-box">border-box</div>
+    <p>content-box <strong>total width</strong> = 164px=120px + 10*2px + 2*2px =the content of wdith + padding +border
+        <br>
+        <strong>total height</strong> = 174 = 150 + 10*2 + 2*2
+    </p>
+
+    <p>border-box total width= 120px =the content of width + padding +border <br>
+        <strong>total height</strong> = 150 =126+ 10*2 + 2*2
+    </p>
+</body>
+
+</html>
