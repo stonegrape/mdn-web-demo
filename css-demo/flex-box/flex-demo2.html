@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一个水平折叠的容器</title>
+    <style>
+        .horizontal-container {
+            display: flex;
+            width: 300px;
+            flex-wrap: wrap;
+        }
+
+        .fixed-size {
+            flex: none;
+            width: 100px;
+            background-color: red;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container" class="horizontal-container">
+        <div class="fixed-size">element 1</div>
+        <div class="fixed-size">element 2</div>
+        <div class="fixed-size">element 3</div>
+    </div>
+    <button id="increase-size">increase container size </button>
+    <button id="decrease-size">decrease container size</button>
+</body>
+<script>
+    let width = 300;
+    document.getElementById('increase-size').onclick = function () {
+        width = width + 100;
+        if (width > 500) {
+            width = 500;
+        }
+        document.getElementById('container').style.width = (width + "px");
+    }
+    document.getElementById('decrease-size').onclick = function () {
+        width = width - 100;
+        if (width < 300) {
+            width = 300;
+        }
+        document.getElementById('container').style.width = (width + 'px');
+    }
+
+</script>
+
+</html>

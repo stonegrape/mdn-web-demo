@@ -231,15 +231,33 @@ div没有长和宽,所以设置border是一横线
 
 2020/2/6
 1. 如何书写简历 软件工程师
-2. 跑步30min 冥想
+2. 运动30min 冥想
 3. em rem font-size
     em: 在 font-size 中使用是相对于父元素的字体大小，在其他属性中使用是相对于自身的字体大小，如 width
     rem: 根元素的字体大小
     需要举例说明
-4. position
+4. position float
 5. 学习方法 如何集中注意力? 实践，了解， 熟悉， 熟练掌握，有问题，不要忽略
 6. 如何调节自己的情绪 不良的情绪需要消化 消极的情绪需要消化；如何调节自己的睡眠，是自己每天可以规律睡觉8h
+    和同龄的人或者年级更加小的人聊聊天。
 7. 数据结构 计算机网络 http, web security, js
 
 
-2020/2/7
+2020/2/8
+1. 软件工程师 学习图谱
+2. flex: flex container
+3. display:flex  
+4. flex-container main-axis cross-axis main-start main-end;cross-start,cross-end flex-item;
+5. 主轴： 沿着flex 元素放置的方向延伸的轴
+6. flex-direction:row/column row-reverse/column-reverse
+8. 元素溢出容器：父元素： flex-wrap:wrap; 子元素 flex:200px
+9. flex-direction flex-wrap: flex-flow:row wrap
+10. flex:1 200px
+11. flex: flex-grow flex-shrink flex-basis
+12. 
+    div {
+        display:flex;
+        align-items:center;/flex-start/flex-end;
+        justify-content:space-around;
+    }
+13. 

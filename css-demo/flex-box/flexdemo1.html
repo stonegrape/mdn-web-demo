@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在页面中把一个元素居中</title>
+    <style>
+        .vertical-box {
+            display: flex;
+            height: 400px;
+            width: 400px;
+            flex-flow: column;
+            background-color: antiquewhite;
+        }
+
+        .horizontal-box {
+            display: flex;
+            flex-flow: row;
+            background-color: aqua;
+        }
+
+        .spacer {
+            flex: auto;
+            background-color: blueviolet;
+        }
+
+        .centered-element {
+            flex: none;
+            background-color: white;
+        }
+
+        /*///////////////////////////////////////*/
+        .fixed-size {
+            flex: none;
+            height: 30px;
+            background-color: black;
+            text-align: center;
+        }
+
+        .flexible-size {
+            flex: auto;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="vertical-box">
+        <div class="spacer"></div>
+        <div class="centered-element horizontal-box">
+            <div class="spacer"></div>
+            <div class="centered-element">Centered content</div>
+            <div class="spacer"></div>
+        </div>
+        <div class="spacer"></div>
+    </div>
+    <hr>
+    <div id="document" class="vertical-box">
+        <div class="fixed-size">
+            <button id="increase-size">Increase container size.</button>
+        </div>
+        <div id="flexible-content" class="flexible-size"></div>
+        <div class="fixed-size">
+            <button id="decrease-size">Decrease container size</button>
+        </div>
+    </div>
+
+
+</body>
+<script>
+    var height = 400;
+    let width = 400;
+    document.getElementById('increase-size').onclick = function () {
+        height += 10;
+        width += 10;
+        if (height > 1000) height = 500;
+        document.getElementById('document').style.height = (height + "px");
+        document.getElementById('document').style.width = (width + "px");
+    }
+
+    document.getElementById('decrease-size').onclick = function () {
+        height -= 10;
+        if (height < 300) height = 300;
+        document.getElementById('document').style.height = (height + "px");
+    }
+</script>
+
+</html>
