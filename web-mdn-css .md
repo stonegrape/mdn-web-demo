@@ -173,7 +173,7 @@ box-sizing:border-box; content-box  width height border padding
 div没有长和宽,所以设置border是一横线
 
 
-信任的老师,优质的资料
+优质的老师,优质的资料
 
 
 
